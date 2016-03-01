@@ -13,6 +13,9 @@
 		A18EF7B71C857512009E4CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A18EF7B51C857512009E4CFE /* Main.storyboard */; };
 		A18EF7B91C857512009E4CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A18EF7B81C857512009E4CFE /* Assets.xcassets */; };
 		A18EF7BC1C857512009E4CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A18EF7BA1C857512009E4CFE /* LaunchScreen.storyboard */; };
+		A18EF7C51C857634009E4CFE /* LSViewA.m in Sources */ = {isa = PBXBuildFile; fileRef = A18EF7C41C857634009E4CFE /* LSViewA.m */; };
+		A18EF7C81C857645009E4CFE /* LSViewB.m in Sources */ = {isa = PBXBuildFile; fileRef = A18EF7C71C857645009E4CFE /* LSViewB.m */; };
+		A18EF7CB1C857656009E4CFE /* LSViewC.m in Sources */ = {isa = PBXBuildFile; fileRef = A18EF7CA1C857656009E4CFE /* LSViewC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		A18EF7B81C857512009E4CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A18EF7BB1C857512009E4CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A18EF7BD1C857512009E4CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A18EF7C31C857634009E4CFE /* LSViewA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSViewA.h; sourceTree = "<group>"; };
+		A18EF7C41C857634009E4CFE /* LSViewA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSViewA.m; sourceTree = "<group>"; };
+		A18EF7C61C857645009E4CFE /* LSViewB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSViewB.h; sourceTree = "<group>"; };
+		A18EF7C71C857645009E4CFE /* LSViewB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSViewB.m; sourceTree = "<group>"; };
+		A18EF7C91C857656009E4CFE /* LSViewC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSViewC.h; sourceTree = "<group>"; };
+		A18EF7CA1C857656009E4CFE /* LSViewC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSViewC.m; sourceTree = "<group>"; };
+		A18EF7CC1C8577E0009E4CFE /* HitTesting.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HitTesting.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,13 @@
 				A18EF7BA1C857512009E4CFE /* LaunchScreen.storyboard */,
 				A18EF7BD1C857512009E4CFE /* Info.plist */,
 				A18EF7AC1C857512009E4CFE /* Supporting Files */,
+				A18EF7C31C857634009E4CFE /* LSViewA.h */,
+				A18EF7C41C857634009E4CFE /* LSViewA.m */,
+				A18EF7C61C857645009E4CFE /* LSViewB.h */,
+				A18EF7C71C857645009E4CFE /* LSViewB.m */,
+				A18EF7C91C857656009E4CFE /* LSViewC.h */,
+				A18EF7CA1C857656009E4CFE /* LSViewC.m */,
+				A18EF7CC1C8577E0009E4CFE /* HitTesting.pch */,
 			);
 			path = hitTesting;
 			sourceTree = "<group>";
@@ -110,6 +127,7 @@
 				TargetAttributes = {
 					A18EF7A81C857512009E4CFE = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = TFGWJBK4QR;
 					};
 				};
 			};
@@ -150,8 +168,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A18EF7B41C857512009E4CFE /* ViewController.m in Sources */,
+				A18EF7C81C857645009E4CFE /* LSViewB.m in Sources */,
 				A18EF7B11C857512009E4CFE /* AppDelegate.m in Sources */,
+				A18EF7CB1C857656009E4CFE /* LSViewC.m in Sources */,
 				A18EF7AE1C857512009E4CFE /* main.m in Sources */,
+				A18EF7C51C857634009E4CFE /* LSViewA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +282,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Learn/hitTesting/hitTesting/HitTesting.pch;
 				INFOPLIST_FILE = hitTesting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.letubao.hitTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -272,10 +299,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Learn/hitTesting/hitTesting/HitTesting.pch;
 				INFOPLIST_FILE = hitTesting/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.letubao.hitTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

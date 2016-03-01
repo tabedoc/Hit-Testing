@@ -1,0 +1,23 @@
+//
+//  HitTesting.pch
+//  hitTesting
+//
+//  Created by liuwp on 16/3/1.
+//  Copyright © 2016年 liuwp. All rights reserved.
+//
+
+#ifndef HitTesting_pch
+#define HitTesting_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+// # define NSLog(format, ...) NSLog((@"[文件名:%s]" "[函数名:%s]" "[行号:%d]" format), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+# define DDNSLog(format, ...) (NSLog((@"%s " format), __func__, ##__VA_ARGS__));
+#else
+# define DDNSLog(format, ...)
+#endif
+
+
+#endif /* HitTesting_pch */
